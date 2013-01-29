@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Ttitle = "Online Music";
+    
+}
+
+@section scripts
+{
+    <script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="../../slide.js" type="text/javascript"></script>
+}
+
+@{Html.RenderAction("Container","Common");}

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<OnlineMusic.Models.Song>
+@{
+    Layout = null;
+}
+
+<script type="text/javascript">
+    $(function () {
+        var $li = $("ol li:eq(0) h5");
+         var $firstli = $("ol li:eq(0)");
+         $firstli.attr("class", "rank_top");
+         $li.before($("<img>").attr({class:"topimg",src:"/Content/themes/images/ranktop-one.jpg"}))
+    })
+</script>
+
+<div class="mod_rank">
+    <div class="title">
+        <h2>
+            排行榜
+        </h2>
+    </div>
+    <div class="mod_t_play">
+        <a href="@Url.Action("Player", "Common")" name="script_btn" class="mod_play" title="播放">播放</a>
+        <a href="@Url.Action("Player", "Common")" name="script_btn" class="mod_add" title="添加">添加</a>
+    </div>
+    <img src="~/Content/themes/images/baidu_fm_gif.gif" id="yindiao" alt="" title="Music" />
+    <div class="ranknumber">
+    </div>
+    <div class="mod_content">
+        <ol class="mod_rank_list">
+            @foreach (var item in Model)
+            {
+                <li>
+                    <h5>
+                        <a href="javascript:void(0)" title="@item.SongName">@item.SongName</a>    
+                    </h5>
+                    <p>
+                        <a href="javascript:void(0)" title="@item.Songer.Name">@item.Songer.Name</a>
+                    </p>
+                </li>       
+            }
+        </ol>
+    </div>
+</div>

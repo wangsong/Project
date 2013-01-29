@@ -1,0 +1,13 @@
+﻿.goTopBtn
+{
+    position: fixed;
+    display: none;
+    text-align: center;
+    line-height: 30px;
+    width: 54px;
+    bottom: 20px;
+    height: 54px;
+    font-size: 12px;
+    cursor: pointer;
+    background: url(../Content/themes/images/top.png) no-repeat;
+}

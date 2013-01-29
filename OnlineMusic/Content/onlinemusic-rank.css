@@ -1,0 +1,168 @@
+﻿/*********************排行榜**********************/
+ .mod_rank
+ {
+    position: relative;
+    margin: 0 0 15px;
+ }
+ .mod_rank .title
+ {
+    height: 18px;
+    padding: 6px 0;
+    margin: 0 0 13px;
+ }
+ 
+ .mod_rank .title h2
+ {
+    height: 18px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(../Content/themes/images/index_title_bg.png) no-repeat 0 -220px;
+ }
+ .mod_t_play a
+{
+    float: left;
+    width: 30px;
+    height: 30px;
+    background:url(../Content/themes/images/icon_sprite.png);
+    background-repeat:  no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+.mod_rank .mod_t_play
+{
+    left: 75px;
+}
+.mod_t_play
+{
+    width: 70px;
+    height: 35px;
+    position: absolute;
+    top: 0;    
+    overflow: hidden;
+}
+
+.mod_t_play .mod_play {
+    background-position: 0px -64px;
+    margin: 0 10px 0 0;
+}
+
+.mod_t_play .mod_play:hover
+{
+    background-position:-30px -64px;
+}
+
+.mod_t_play .mod_add
+{
+    background-position:-56px -285px;
+}
+
+.mod_t_play .mod_add:hover
+{
+   background-position:-88px -285px;
+}
+
+#yindiao
+{
+   position:absolute;
+   left:200px;
+   width:35px;
+   height:25px;
+   top:0px;
+}
+
+/***********content*********/
+.mod_rank .mod_content
+{
+   width:230px;
+   overflow:hidden;
+   height:280px;
+   float:right;
+}
+.ranknumber
+{
+    margin-left:5px;
+    width:25px;
+    height:280px;
+    background:url(../Content/themes/images/icon_sprite.png) no-repeat -166px -225px;
+    float:left;
+}
+.mod_rank_list li
+{
+    overflow: hidden;
+    height: 24px;
+    width: 220px;
+}
+
+.mod_rank .mod_rank_list li h5,.mod_rank .mod_rank_list li p 
+{
+	float:left;
+	width:89px;
+	height:24px;
+	line-height:24px;
+}
+
+.mod_rank_list li h5
+{ 
+    margin-left:30px;
+}
+.mod_rank_list li h5 a
+{
+    color:#0F820C;
+    text-decoration:none;
+    font-weight: 500; 
+    font-size:12px;
+}
+
+.mod_rank_list li h5 a:hover
+{
+    color:#05B600;
+}
+
+.mod_rank .mod_rank_list li p a
+{
+    font-size:12px;
+    text-decoration:none;
+    color:#515151;
+    float:right;
+ 
+}
+.mod_rank .mod_rank_list li p a:hover
+{
+    color:Black;
+}
+
+.mod_rank .mod_rank_list .rank_top
+{
+    height:52px;
+}
+
+.mod_rank .mod_rank_list .rank_top .topimg
+{
+    width:50px;
+    height:50px;
+    float:left;
+    margin-left:30px;
+}
+
+.mod_rank .mod_rank_list .rank_top h5
+{
+    margin-left:10px;
+}
+
+.mod_rank .mod_rank_list .rank_top h5 a
+{
+     font-size:22px;
+     color:#ff5400;
+     font-family:"Microsoft YaHei";
+     height:30px;
+}
+.mod_rank .mod_rank_list .rank_top h5 a:hover
+{
+    color:#0F820C;
+}
+.mod_rank .mod_rank_list .rank_top p a
+{
+    float:none;
+    text-align:left;
+    margin-left:10px;
+}

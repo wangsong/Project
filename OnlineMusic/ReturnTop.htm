@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script src="../../Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() >= 300)//距离顶部多少高度显示按钮
+                {
+                    $('#goTopBtn').fadeIn(200);
+                } else {
+                    $('#goTopBtn').fadeOut(200);
+                }
+            });
+
+            $('#goTopBtn').click(function () {
+                $('body,html').animate({ scrollTop: 0 }, 500)
+            });
+
+            //按钮定位
+            var win_width = $(window).width();      //窗口宽度
+            var content_width = $('.wrap').width();     //容器宽度
+            var topbtn_width = $('#goTopBtn').width(); //按钮宽度
+            //alert([win_width - content_width]/2);
+
+            //距离主体部分的右侧距离
+            var topbtn_posi = ([win_width - content_width] / 2 - topbtn_width - 10);
+            $('#goTopBtn').css({ 'right': topbtn_posi });
+
+        })
+    </script>
+    <style type="text/css">
+        .wrap
+        {
+            width: 980px;
+            height: 1200px;
+            border: 1px #000 solid;
+            margin: 0 auto;
+        }
+
+        .goTopBtn
+        {
+            position: fixed;
+            _position: absolute;
+            display: none;
+            text-align: center;
+            line-height: 30px;
+            width: 54px;
+            bottom: 35px;
+            height: 54px;
+            font-size: 12px;
+            cursor: pointer;
+            background: url(../Content/themes/images/top.png) no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    </div>
+    <div id="goTopBtn" class="goTopBtn">
+        <a href="javascript:;" title="我要上去！" alt="回到顶部" />
+    </div>
+</body>
+</html>

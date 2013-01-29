@@ -1,0 +1,61 @@
+﻿.mod_first {
+    width: 700px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 0 38px;
+    font-size:11px;
+}
+
+.mod_first .title
+{
+    height: 26px;
+    padding: 2px 0;
+    overflow: hidden;
+    margin: 0 0 18px;
+    border-left: solid 5px green;
+}
+
+.mod_first .title h2{
+    height: 26px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(../Content/themes/images/index_title_bg.png) no-repeat 10px 0;
+}
+
+.mod_more
+{
+    width: 37px;
+    height: 14px;
+    position: absolute;
+    top: 13px;left:135px;   
+}
+ 
+.mod_more .mod_more_link {
+    display: block;
+    width: 37px;
+    height: 14px;
+    font-size: 0;
+    line-height: normal;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(../Content/themes/images/index_title_bg.png) no-repeat left -238px;
+}
+
+.mod_first .mod_content{width:700px;overflow:hidden}
+.mod_first .slide_content{width:2130px;height:270px;overflow:hidden}
+.mod_first_list{width:710px;height:270px;float:left;overflow:hidden}
+.mod_first_list li{width:130px;height:130px;float:left;margin:0 12px 10px 0}
+.mod_first_list li .mod_poster_130:hover .icon_play{right:5px;bottom:53px}
+
+.mod_poster_130{position:relative}
+.mod_poster_130,.mod_poster_130 img{display:block;width:130px;height:130px}
+.mod_poster_130:hover{text-decoration:none;border:none}
+.mod_poster_130 .shadow{display:block;width:130px;height:48px;position:absolute;z-index:1;left:0;bottom:0;background:#000;opacity:.75;cursor:pointer;filter:alpha(opacity=75)}
+.mod_poster_130 strong{display:block;width:130px;height:20px;position:absolute;z-index:2;left:0;font-weight:500;cursor:pointer;text-indent:5px;overflow:hidden;word-break:keep-all;word-wrap:keep-all;white-space:nowrap;table-layout:fixed;-o-text-overflow:ellipsis;text-overflow:ellipsis}
+.mod_poster_130 .album_name{height:28px;line-height:28px;bottom:20px;color:#98e404;font-size:14px}
+.mod_poster_130 .album_singer{line-height:18px;bottom:0;color:#fff}
+.mod_poster_130 .icon_play{display:none}
+.mod_poster_130 .icon_play_hover{display:none}
+.mod_poster_130:hover .icon_play{display:block;width:20px;height:20px;cursor:pointer;position:absolute;right:5px;bottom:5px;background:url(img/icon_play.png) no-repeat 0 0;_background:url(img/icon_play.png) no-repeat 0 -20px}
+.mod_poster_130:hover .icon_play:hover, .mod_poster_130:hover .icon_play_hover{display:block;width:20px;height:20px;cursor:pointer;position:absolute;right:5px;bottom:5px;background:url(img/icon_play.png) no-repeat -20px 0;_background:url(img/icon_play.png) no-repeat -20px -20px}
+.mod_poster_130 .icon_hq{display:inline-block;*display:inline;vertical-align:middle;zoom:1;width:15px;height:9px;background-image:url(img/icon_sprite.png);background-repeat:no-repeat;background-position:-96px -259px;line-height:9999px;overflow:hidden;position:absolute;right:0;top:0}

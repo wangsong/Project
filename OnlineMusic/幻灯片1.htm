@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        #slideshow-container
+        {
+            width: 700px;
+            height: 320px;
+            position: relative;
+        }
+        #slideshow-container img
+        {
+            width: 700px;
+            height: 320px;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        #slideshow-container-controls
+        {
+            margin: 10px 0 0 0;
+        }
+        #slideshow-container-controls img
+        {
+            cursor: pointer;
+            width: 140px;
+            height: 75px;
+            border: 1px solid #ccc;
+            float: left;
+            margin: 0 1px 0 0;
+        }
+        #slideshow-container-caption
+        {
+            height: 70px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #000;
+            z-index: 10;
+            overflow: hidden;
+        }
+        * html #slideshow-container-caption
+        {
+            width: 100%;
+        }
+        #slideshow-container-caption h3
+        {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            padding: 10px 10px 3px 10px;
+        }
+        #slideshow-container-caption p
+        {
+            color: #eee;
+            font-size: 11px;
+            padding: 0 10px 10px 10px;
+        }
+        .toc-active
+        {
+            border-color: #000;
+        }
+        
+        
+    
+    </style>
+    <script src="Scripts/wangsong.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.addEvent('domready', function () {
+            /* settings */
+            var showDuration = 5000;
+            var container = $('slideshow-container');
+            var images = container.getElements('img');
+            var currentIndex = 0;
+            var interval;
+            var toc = [];
+            var tocActive = 'toc-active';
+            var thumbOpacity = 0.7;
+
+            /* new: create caption area */
+            var captionDIV = new Element('div', {
+                id: 'slideshow-container-caption',
+                styles: {
+                    //display:none,
+                    opacity: thumbOpacity
+                }
+            }).inject(container);
+            var captionHeight = captionDIV.getSize().y;
+            captionDIV.setStyle('height', 0);
+
+            /* new: starts the show */
+            var start = function () { interval = show.periodical(showDuration); };
+            var stop = function () { $clear(interval); };
+            /* worker */
+            var show = function (to) {
+                images[currentIndex].fade('out');
+                toc[currentIndex].removeClass(tocActive).fade(thumbOpacity);
+                images[currentIndex = ($defined(to) ? to : (currentIndex < images.length - 1 ? currentIndex + 1 : 0))].fade('in');
+                toc[currentIndex].addClass(tocActive).fade(1);
+                captionDIV.set('tween', {
+                    onComplete: function () {
+                        captionDIV.set('tween', {
+                            onComplete: $empty
+                        }).tween('height', captionHeight);
+                        /* parse caption */
+                        var title = '';
+                        var captionText = '';
+                        if (images[currentIndex].get('alt')) {
+                            cap = images[currentIndex].get('alt').split('::');
+                            title = cap[0];
+                            captionText = cap[1];
+                            captionDIV.set('html', '<h3>' + title + '</h3>' + (captionText ? '<p>' + captionText + '</p>' : ''));
+                        }
+                    }
+                }).tween('height', 0);
+            };
+
+            /* new: create preview area */
+            var preview = new Element('div', {
+                id: 'slideshow-container-controls'
+            }).inject(container, 'after');
+
+            /* new: control: table of contents */
+            images.each(function (img, i) {
+                /* add to table of contents */
+                toc.push(new Element('img', {
+                    src: img.get('src'),
+                    title: img.get('alt'),
+                    styles: {
+                        opacity: thumbOpacity
+                    },
+                    events: {
+                        click: function (e) {
+                            if (e) e.stop();
+                            stop();
+                            show(i);
+                            start();
+                        },
+                        mouseenter: function () {
+                            this.fade(1);
+                        },
+                        mouseleave: function () {
+                            if (!this.hasClass(tocActive)) this.fade(thumbOpacity);
+                        }
+                    }
+                }).inject(preview));
+                if (i > 0) { img.set('opacity', 0); }
+
+            });
+
+            /* control: start/stop on mouseover/mouseout */
+            container.addEvents({
+                mouseenter: function () { stop(); },
+                mouseleave: function () { start(); }
+            });
+
+            /* start once the page is finished loading */
+            window.addEvent('load', function () { show(0); start(); });
+        });
+    </script>
+</head>
+<body>
+    <!-- Add the HTML header -->
+    <div id="page">
+        <!-- holds content, will be frequently changed -->
+        <div id="contentHolder">
+            <!-- start the left section if not the homepage -->
+            <section class="left">
+ 
+<div id="promoNode"></div>	
+	<div id="slideshow-container">
+		<img src="Content/themes/images/image1.jpg" alt="Christina Ricci 1::This is the caption for photo 1." />
+		<img src="Content/themes/images/image2.jpg" alt="Christina Ricci 2::This is the caption for photo 2." />
+		<img src="Content/themes/images/image3.jpg" alt="Christina Ricci 3::This is the caption for photo 3." />
+		<img src="Content/themes/images/image4.jpg" alt="Christina Ricci 4::This is the caption for photo 4." />
+		<img src="Content/themes/images/image5.jpg" alt="Christina Ricci 5::This is the caption for photo 5." />
+	</div>
+	
+	
+	
+</section>
+        </div>
+</body>
+</html>

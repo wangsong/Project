@@ -1,0 +1,150 @@
+﻿/***************Basic Css*************/
+* {
+	margin:0px;
+	padding:0px;
+}
+img,a {
+	text-decoration:none;
+	border:0;
+}
+body {
+	background:whiteSmoke;
+	font-family:"微软雅黑","Arial Narrow",HELVETICA;
+}
+#Container {
+	border:1px solid #ccc;
+	width:1000px;
+	height:2000px;
+	margin:0 auto;
+	background:white;
+	box-shadow:0 5px 20px #CCC;
+	position:relative;
+	border-radius:4px;
+}
+#header {
+	width:100%;
+	height:100px;
+	position:relative;
+	margin-bottom:20px;
+}
+#footer {
+	width:100%;
+	bottom:0px;
+	background:url(/Content/themes/images/features_bot.png) repeat-x;
+	height:86px;
+	text-align:center;
+	color:white;
+	text-shadow:1px 1px 1px #2C6454;
+	margin-top:30px;
+    /*-webkit-border-bottom-right-radius:4px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-bottomright:4px;
+	-moz-border-radius-bottomleft:4px;
+	border-bottom-right-radius:4px;
+	border-bottom-left-radius:4px;*/
+}
+.login {
+	float:right;
+	color:#8E8D8A;
+	font-size:13px;
+	font-weight:normal;
+	margin-left:15px;
+	margin-right:20px;
+	padding:16px 0 0 25px;
+	text-decoration:none;
+	text-transform:uppercase;
+	background:url(/Content/themes/images/icon-login.png) 0 15px no-repeat;
+}
+#logo a img {
+	width:95px;
+	height:92px;
+	margin:14px 0 0 190px;
+}
+/*************************nav menu css***************************/
+.bar {
+	width:1000px;
+	height:36px;
+	background:#000;
+	margin:0 auto;
+	margin-bottom:10px;
+	border-radius:4px;
+	box-shadow:0 5px 20px black;
+}
+ul,li {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.nav {
+	float:left;
+	height:36px;
+	overflow:hidden;
+}
+.nav li {
+	float:left;
+	height:36px;
+	line-height:36px;
+	width:102px;
+	overflow:hidden;
+	border-right:1px #555 solid;
+}
+.nav li a {
+	font-family:Arial;
+	font-size:14px;
+	display:block;
+	padding:0px 10px;
+	text-decoration:none;
+	text-align:center;
+	color:#fff;
+}
+.nav li a:hover {
+	background:#00BB00;
+	/*#F60*/
+}
+/*第一个菜单Home 圆角*/
+.firstmenu {
+	border-top-left-radius:4px;
+	border-bottom-left-radius:4px;
+}
+/**********************search box**********************/
+.search_form
+{
+   padding:1px; 
+}
+
+.txtsearch {
+    float: left;
+    font-size: 10.5pt;
+    width: 150px;
+    height: 30px;
+    border: 1px solid #40AA53;
+    padding: 0 10px;
+    margin-left:5px;
+}
+.btnsearch {
+    float: left;
+    font-size: 10.5pt;
+    color: #999;
+    background: #40AA53;
+    border: 0;
+    color: white;
+    height: 32px;
+    padding: 0 10px;
+    cursor: pointer;
+    }
+.btnsearch:hover {
+	background:#40AA53;
+}
+/********************content**********************/
+#main_container {
+	float:left;
+	border-right:1px solid #dcdcdc;
+	width:717px;
+	margin-left:3px;
+	padding-top:3px;
+}
+#slid_container {
+	float:right;
+	width:260px;
+	padding-top:3px;
+}

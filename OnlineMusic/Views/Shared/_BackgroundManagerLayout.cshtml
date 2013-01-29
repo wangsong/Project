@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html />
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="../../Content/onlinemusic-backmanager.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="main-fram">
+        <div id="header">
+            <div class="logo">
+                <a href="../Home/Index">
+                    <img src="../../Content/themes/images/logo2.png" alt="" title="Go Home">
+                </a>
+            </div>
+            <div class="account">
+                <a class="login" href="javascript:window.close()">Log Out</a>
+            </div>
+            <!--<hr color="#00BB00" size="1px" />-->
+        </div>
+        <div id="secondary_bar">
+            <div class="user">
+                <p>John Doe (<a href="#">3 Messages</a>)</p>
+            </div>
+            <div class="breadcrumbs_container">
+                <div class="breadcrumbs">
+                    <a href="#">Website Admin</a>
+                    <div class="breadcrumb_divider">
+                    </div>
+                    <a class="current">Dashboard</a>
+               </div>
+            </div>
+        </div>
+        <div class="mainContent">
+            <div class="sidebar">
+                <div>
+                    <h3>
+                        Content <a href="#" class="toggleLink">Hide</a></h3>
+                    <ul class="toggle" style="display: block;">
+                        <li class="icn_new_article"><a href="#">New Article</a></li>
+                        <li class="icn_edit_article"><a href="#">Edit Articles</a></li>
+                        <li class="icn_categories"><a href="#">Categories</a></li>
+                        <li class="icn_tags"><a href="#">Tags</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <form method="post" action="http://baidu.com" id="resource_search">
+                <input type="hidden" name="channel" value="resources">
+                <div class="top_search">
+                    <input type="text" name="keywords" value="Search..." class="input_keyword" id="keywords"
+                        onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}">
+                    <input type="submit" value="SEARCH" class="input_search">
+                </div>
+                </form>
+                <div id="container">
+                    @RenderBody()     
+                </div>
+            </div>
+        </div>
+        @{Html.RenderAction("Footer", "Common");}
+    </div>
+</body>
+</html>

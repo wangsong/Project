@@ -1,0 +1,220 @@
+﻿* {
+	margin:0px;
+	padding:0px;
+}
+body {
+	background:#F8F8F8;
+	font-family:Microsoft YaHei ,Verdana;
+	font-size:14px;
+}
+li,a,img {
+	text-decoration:none;
+	list-style:none;
+	color:Black;
+	border:0;
+}
+#header {
+	width:100%;
+	height:120px;
+	position:relative;
+}
+
+.logo a img {
+	width:95px;
+	height:92px;
+	margin:14px 0 0 215px;
+	margin-bottom:10px;
+	float:left;
+}
+.account
+{
+  float:right;
+  width:200px;
+  margin-top:90px;
+}
+.account .login
+{
+ 
+    color: #8E8D8A;
+    font-size: 13px;
+    font-weight: normal;
+    margin-right: 20px;
+    padding: 16px 0 0 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: url(/Content/themes/images/icon-login.png) 0 15px no-repeat;
+}
+ 
+
+/*********secondary_bar**********/
+div#secondary_bar {
+	height:38px;
+	width:100%;
+	font-size:11px;
+	background:#F1F1F4 url(/Content/themes/images/backmanager2/secondary_bar.png) repeat-x;
+}
+div#secondary_bar .user {
+	float:left;
+	width:20%;
+	height:38px;
+}
+.user p {
+	margin:0;
+	padding:0;
+	color:#666666;
+	font-weight:bold;
+	display:block;
+	float:left;
+	width:85%;
+	height:35px;
+	line-height:35px;
+	text-indent:25px;
+	text-shadow:0 1px 0 #fff;
+	background:url(/Content/themes/images/backmanager2/icn_user.png) no-repeat center left;
+	margin-left:10%;
+}
+.user a {
+	text-decoration:none;
+	color:#666666
+}
+.user a:hover {
+	color:#77BACE;
+}
+.user a.logout_user {
+	float:left;
+	display:block;
+	width:16px;
+	height:35px;
+	text-indent:-5000px;
+	background:url(/Content/themes/images/backmanager2/icn_logout.png) center no-repeat;
+}
+
+/**************** Breadcrumbs ***********/
+div#secondary_bar .breadcrumbs_container {
+	float:left;
+	width:80%;
+	height:38px;
+	background:url(/Content/themes/images/backmanager2/secondary_bar_shadow.png) no-repeat left top;
+}
+div.breadcrumbs {
+	float:left;
+	padding:0 10px;
+	border:1px solid #ccc;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-box-shadow:0 1px 0 #fff;
+	-moz-box-shadow:0 1px 0 #fff;
+	box-shadow:0 1px 0 #fff;
+	height:23px;
+	margin:4px 3%;
+}
+.breadcrumbs a {
+	display:inline-block;
+	float:left;
+	height:24px;
+	line-height:23px;
+}
+.breadcrumbs a.current,.breadcrumbs a.current:hover {
+	color:#9E9E9E;
+	font-weight:bold;
+	text-shadow:0 1px 0 #fff;
+	text-decoration:none;
+}
+.breadcrumbs a:link,.breadcrumbs a:visited {
+	color:#44474F;
+	text-decoration:none;
+	text-shadow:0 1px 0 #fff;
+	font-weight:bold;
+}
+.breadcrumbs a:hover {
+	color:#222222;
+}
+.breadcrumb_divider {
+	display:inline-block;
+	width:12px;
+	height:24px;
+	background:url(/Content/themes/images/backmanager2/breadcrumb_divider.png) no-repeat;
+	float:left;
+	margin:0 5px;
+}
+
+/***********content**********/
+ .mainContent {
+	height:800px;
+}
+.mainContent .sidebar {
+	width:20%;
+	height:100%;
+	float:left;
+	background:url(/Content/themes/images/backmanager2/sidebar.png);
+	margin-top:-4px;
+}
+.mainContent .content {
+	width:80%;
+	height:100%;
+	float:right;
+	 background:White;
+	margin-top:-2px;
+	background:url(/Content/themes/images/backmanager2/sidebar_shadow.png) repeat-y left top;
+}
+/***********footer**************/
+#footer {
+	width:100%;
+	background:url(/Content/themes/images/features_bot.png) repeat-x;
+	height:86px;
+	text-align:center;
+	color:white;
+	text-shadow:1px 1px 1px #2C6454;
+	margin-top:-4px;
+}
+
+/************search box************/
+#resource_search {
+	float:right;
+	border:1px solid #ccc;
+	background:#fff;
+	width:405px;
+	height:35px;
+	margin:10px 10px 0 0;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.input_keyword {
+	border:0 !important;
+	width:300px;
+	height:33px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	margin-left:10px;
+	color:#999999;
+	font-size:13px;
+	float:left;
+	line-height:33px;
+	outline:none;
+}
+.input_keyword:focus {
+	outline:none;
+	border:0 !important;
+}
+.input_search {
+	background:url('/Content/themes/images/backmanager2/btn_search.png') top left no-repeat;
+	width:89px;
+	height:33px;
+	border:0;
+	cursor:pointer;
+	margin-right:2px;
+	margin-top:1px;
+	font-weight:bold;
+	color:#1E3E52;
+	text-indent:20px;
+	text-shadow:0 1px 0 #86C4EF;
+	line-height:30px;
+	font-size:12px;
+	float:right;
+}
+.input_search:hover {
+	background-position:0 -33px;
+}
